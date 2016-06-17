@@ -23,7 +23,7 @@ https://github.com/opensourcecloud
 ![参与机制图示](http://cdn.opensourcecloud.cn/github.png)1. 项目的管理者是PL: Project Leader，Github的角色为Admin
    1. 担任：
       1. 行业项目由OSCAR联盟的用户会员行业重要客户或第三方担任；技术和解决方案项目由OSCAR联盟理事或全权会员担任，或和某技术社区合作
-	    2. 每三个月一选，从企业CORE里选
+      2. 每三个月一选，从企业CORE里选
 
 	    
 	2. 负责：
@@ -35,7 +35,7 @@ https://github.com/opensourcecloud
 	    2. 项目的核心编写者是CORE，Github的角色为Write
   1. 担任：
       1. 企业的CORE由联盟会员参与
-	    2. 个人的CORE从贡献者突出者或行业知名技术专家中产生，由本项目PL和已有CORE同意，经秘书处决定可以成为个人CORE
+      2. 个人的CORE从贡献者突出者或行业知名技术专家中产生，由本项目PL和已有CORE同意，经秘书处决定可以成为个人CORE
 
 	    
 	2. 负责：
@@ -45,8 +45,8 @@ https://github.com/opensourcecloud
 3. 项目的贡献者是Contributor，Github上可以FORK 后PULL Request
   1. 个人：
       1. 可以以个人身份参与项目的编写
-	    2. 以Github统计为准，PR后成为Commit贡献较多者，可以成为个人CORE
-	    3. 成为个人CORE以后，联系一个项目的PL，经PL同意，报秘书处，发起个人子项目
+      2. 以Github统计为准，PR后成为Commit贡献较多者，可以成为个人CORE
+      3. 成为个人CORE以后，联系一个项目的PL，经PL同意，报秘书处，发起个人子项目
 
 	    
 	2. 企业：
