@@ -62,7 +62,7 @@ https://github.com/opensourcecloud
 
 1. GitHub账号注册: https://github.com/join
 
-2. GitHub客户端下载:
+2. GitHub客户端下载:  
    Windows: http://cdn.opensourcecloud.cn/GitHubSetup.exe.zip  
    Mac: http://cdn.opensourcecloud.cn/GitHubMac220.zip
 
