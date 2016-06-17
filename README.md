@@ -36,12 +36,11 @@ https://github.com/opensourcecloud
   1. 担任：
       1. 企业的CORE由联盟会员参与
       2. 个人的CORE从贡献者突出者或行业知名技术专家中产生，由本项目PL和已有CORE同意，经秘书处决定可以成为个人CORE
-
-	    
-	2. 负责：
-	    1. 子项目主要内容编写
-	    2. Review贡献者的内容
-	    3. 承担的子项目成果发布（如果有的话）
+	  
+  2. 负责
+	   1. 子项目主要内容编写
+	   2. Review贡献者的内容
+	   3. 承担的子项目成果发布（如果有的话）
 
 3. 项目的贡献者是Contributor，Github上可以FORK 后PULL Request
   1. 个人：
