@@ -75,7 +75,7 @@
 版权声明
 ========
 
-![](media/39119df78331a72cf1381b7b25650036.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack01.png)
 
 opensourcecloud-specification 由
 [OSCAR](https://github.com/organizations/opensourcecloud/) 创作，采用 [知识共享
@@ -116,14 +116,14 @@ Enterprise、中国电信股份有限公司云计算分公司、中国移动通�
 
 OpenStack由NASA（美国国家航空航天局）和Rackspace（云解决方案公司）合作开发，经Apache2.0许可授权，以Python语言为基础的，由多个组件组成的完全开源项目。该项目于2010年7月19日，在美国OSCON（全球开源网络大会）上宣布设立，同年10月1日，项目第一个版本Austin正式发布。2012年9月，OpenStack基金会正式成立，宣布正式接手OpenStack社区管理。截至2015年底，OpenStack社区成员已经超过32000名，拥有来自近200个国家的开发者和用户，项目代码总行数超过400万行，支持企业550余家。2016年4月，基金会发布了最新版Mitaka，在API、用户体验上再次做出大幅度优化。
 
-![](media/b3267553bc5f42b20c5110917d014e84.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack02.png)
 
 根据Zenoss
 2014年底的市场调研，全球的开源市场中，OpenStack的部署比例达到69%；CloudStack的部署比例为14%；Eucalyptus比例为3%。
 
 开源解决方案部署比例示意图（数据来源：Zenoss）
 
-![](media/281d068413d83dd8d154aa247b5c068f.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack03.png)
 
 2016年4月，OpenStack基金会发布第七份用户调查报告。报告显示，目前，OpenStack主要应用在IT行业中，比例约占68%。通信、学术研究等行业所占比例较大。
 
@@ -131,11 +131,11 @@ OpenStack产业应用情况（数据来源：OpenStack基金会）
 
 从区域分布上来看，北美洲最多，约占46%；其次是欧洲和亚洲，各占24%。
 
-![](media/33d9fd4c23eed1703151dc4315c7899a.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack04.png)
 
 OpenStack部署地域分布情况统计（数据来源：OpenStack基金会）
 
-![](media/a70ed45573cb17a84c3e2d64a0eeea56.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack05.png)
 
 在用户感兴趣的云服务排名中，OpenStack的私有云和公有云服务排名第二、三位，与排名第一的AWS相差甚微。
 
@@ -148,23 +148,23 @@ OpenStack部署地域分布情况统计（数据来源：OpenStack基金会）
 
 **OpenStack在中大型企业使用率较高。**其中，从部署OpenStack的企业规模上看，中等规模的企业占据较大比例。基金会的最新调查报告显示，部署OpenStack的企业中，千人规模的企业比例最高，达到23%；百人规模的企业第二，占18%。
 
-![](media/ea6055a889e8e81d303ef7485f8683e7.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack06.png)
 
 部署OpenStack的企业规模（数据来源：OpenStack基金会）
 
-![](media/2a6cf86d899669a6e98e2c7ed2995f8f.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack07.png)
 
 **另一份调研报告显示，尝试和计划使用OpenStack的企业将持续增长。**RightScale公司发布的《2016年度云计算调查报告》显示，OpenStack作为私有云解决方案的采纳率稳定在19%，在1000人以下的企业中采纳率位列第二（图1）;在1000人以上的企业中采纳率位列第四，尝试和计划使用OpenStack的受访者比例为34%（图2），远远高于其他解决方案；提供OpenStack的云服务供应商比例进一步提高，达17%。
 
 图1：1000人以下企业私有云使用比例（数据来源：RightScale）
 
-![](media/df8c2601f52d872d48283f55dbabd547.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack08.png)
 
 图2：大型企业私有云采纳比例（数据来源：RightScale）
 
 此外，根据Talligent公司发布的《2016年OpenStack状态报告》，“OpenStack正在逐渐成为所有企业创建私有云和混合云时的首选”。这份报告显示，熟悉OpenStack，并正在使用的占30%，正在评估的占32%，熟悉但还没有部署的占36%。
 
-![](media/97683aa62abbc600c7f8efea8e20d2be.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack09.png)
 
 熟悉并使用OpenStack比例图
 
@@ -205,19 +205,19 @@ OpenStack主要用于IaaS服务商或私有云基础设施层解决方案，根�
 
 公有云方面，根据中国信息通信研究院调研，2014年国内公共云服务逐步从互联网向行业市场延伸，市场整体规模约为70.2亿元人民币，比2013年增长47.5%，增速大大高于2013年35.9%的增长率，市场活跃度呈现整体提升的趋势。预计2015年国内公共云服务市场仍将保持高速增长态势，整体市场规模可望突破100亿元人民币。
 
-![](media/b87407a2039178d82835283fdaf81654.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack10.png)
 
 （数据来源：中国信息通信研究院《2015年公有云市场调查报告》）
 
 根据中国信息通信研究院的可信云服务认证调查数据显示，在通过可信云服务认证的46家IaaS服务商中，7家采用CloudStack或基于Cloudstack进行二次开发，22家采用OpenStack或基于OpenStack进行二次开发，6家采用Vmware，11家采用自研或其它的虚拟化管理软件，所以，近半的公有云IaaS服务商选用OpenStack解决方案。
 
-![](media/b1b8a925d59a0e1ce3280d4516ec3fbc.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack11.png)
 
 公有云IaaS选用解决方案比例图
 
 （数据来源：可信云服务认证2016年1月观察）
 
-![](media/c53e8c00e7aeca1fe0efdee68baadc99.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack12.png)
 
 私有云方面，根据中国信息通信研究院的的统计数字。2015年，中国私有云市场规模已经达到275.6亿元人民币，同比2014年增长27.1%。预计2016年，增速仍保持在25.5%左右，市场规模将达到346亿。
 
@@ -227,13 +227,13 @@ OpenStack主要用于IaaS服务商或私有云基础设施层解决方案，根�
 
 **企业对开源软件的接受程度较高。**在调研的4000多家中型企业中，已经部署私有云的企业占8.4%，有超过70%的企业不同程度的采用了开源软件（包括虚拟化软件、私有云平台软件等）。采用开源软件可以降低软件支出，但同时也对IT人员的开发和维护水平提出了更高的要求。
 
-![](media/757ce254c05037eda9c39ccfed4b27fe.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack13.png)
 
 （数据来源：中国信息通信研究院《2015年私有云市场调查报告》）
 
 **OpenStack是使用率最高的云计算开源管理平台。**在已经部署私有云的企业中，目前比较热门的开源平台均有使用，其中采用OpenStack的企业有接近40%，其次为CloudStack（20.7%）和Eucalyptus（15.3%）。
 
-![](media/e0a910cb69c1418cb9eb5ebb090cf74b.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack14.png)
 
 （数据来源：中国信息通信研究院《2015年私有云市场调查报告》）
 
@@ -242,7 +242,7 @@ OpenStack主要用于IaaS服务商或私有云基础设施层解决方案，根�
 
 国内厂商对OpenStack国际社区的贡献巨大。很多的贡献来自于中国的开发者。中国的开发者人数和OpenStack峰会与会员人数在全世界位列前五；国内城市中，北京、上海、深圳是代码贡献率较高的城市。
 
-![](media/065c6c17e684ddf42397670b31e90d73.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack15.png)
 
 全球范围内，向OpenStack社区贡献代码的企业和个人非常活跃，根据官方统计，社区每分钟均可得到数条的贡献数量。
 
@@ -327,7 +327,7 @@ Glance是虚拟机镜像查找及检索系统，支持多种虚拟机镜像格�
 
 上述三个组件与系统中的其他所有组件进行交互：Horizon是图形用户界面，管理员可以很容易地使用它来管理所有项目。Keystone处理授权用户的管理，Neutron定义提供组件之间连接的网络。
 
-![](media/61a4ddd7bcab9c89f2998b412c9ce07b.tiff)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack17.png)
 
 Nova被认为是OpenStack的核心，负责处理工作负载的流程。它的计算实例通常需要进行基于块的（Cinder）或基于对象的（Swift）形式的持久存储。Nova还需要一个镜像来启动一个实例，Glance将会处理这个请求，它可以有选择地使用Swift作为其存储后端。
 
@@ -340,7 +340,7 @@ OpenStack架构图
 
 根据基金会的统计数据，有97%的受访者认为OpenStack最大的优势在于具有同一开放平台和API，92%的受访者认为使用OpenStack可以避免出现被供应商锁定的情况。
 
-![](media/86fb0f431ce82d5ddb9567981173fd6a.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack18.png)
 
 OpenStack的主要优势（数据来源：OpenStack基金会）
 
@@ -348,13 +348,13 @@ OpenStack的主要优势（数据来源：OpenStack基金会）
 
 ### **2.兼容容器、文件管理等技术**
 
-![](media/044f49fea86bacde6d53989f830e8ba8.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack19.png)
 
 根据基金会最新统计报告，OpenStack项目中，Magnum（容器服务）、Designate（DNS服务）、文件共享系统（Milano）等最受使用者关注。
 
 最受关注的OpenStack项目（数据来源：OpenStack基金会）
 
-![](media/3b7c893fcaebb0a369bdcc48ac082932.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack20.png)
 
 另，在OpenStack的新兴项目中，Rally、Murano、Manila排名前三。
 
@@ -375,19 +375,19 @@ OpenStack以其一系列天然的优势，已经打下了一个广泛且稳定�
 其次，很多客户对于OpenStack的应用场景并不是很明确，也没有规范或标准评估是否适合自身的应用需求。客户对于IT
 的需求提出多是需求层面的，包括资源池化、安全风控、大规模等描述。一方面，OpenStack是对虚拟化进行管理的云，是IaaS层组件，主要适用于IaaS层或基础设施层虚拟化管理，但对于用户来说，上层的开发平台、行业应用是被关注的重点。国内的OpenStack产品和服务对于向上集成的完备程度仍有欠缺，集成的完备能力和成熟度应作为OpenStack产品服务内嵌的必备要素。另一方面，OpenStack更适用于IT规模化部署场景。对于大部分仅拥有少量IT资源的中小企业而言，部署虚拟化配合简单的管理，即可达到其资源优化的目的，或可以将自己的业务部署在基于OpenStack的公有云上，能最大程度的享受OpenStack的优势。所以产业需要一些评估规范指南帮助用户选择合适的OpenStack解决方案。
 
-![](media/bdc4ecdefa439442ce36861d9eb2d44a.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack21.png)
 
 除了场景以外的困惑，根据中国信息通信研究院的统计，中国厂商目前对于包括OpenStack解决方案选型存在困惑。有超过50%的受访企业表示其IT人员对私有云技术、解决方案不够了解；34%的客户表示部署时间长，31%的客户表示从一个云迁移到另一个云时有困难，约46%的企业表示使用OpenStack私有云后的IT支出所有增加，这些使得客户接纳和使用OpenStack需要一个较长的过程。
 
 数据来源：中国信息通信研究院《2015年中国私有云发展调查报告》
 
-![](media/c0cd6b5af1566184b1b4f60ddf83c0cc.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack22.png)
 
 OpenStack部署满意度示意图
 
 数据来源：中国信息通信研究院《2015年中国私有云发展调查报告》
 
-![](media/a3c994d6a9ecdf7a5934b525f7645862.png)
+![](http://oh1a3ddd9.bkt.clouddn.com/OpenStack23.png)
 
 部署OpenStack后对IT支出的影响统计
 
