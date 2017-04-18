@@ -283,6 +283,7 @@ DC/OS是一个开源项目，于2016年4月推出，采用Apache 2.0协议，拥
 2017年，DC/OS中国社区发布对中国云计算企业的调研访问报告《2017年中国Mesos、DC/OS调研报告》，报告显示虽然中国市场对Mesos有普遍的了解，但在生产环境中的使用率仍然很低，仅占10%。有7%的受访者表示从未听说过Mesos；有83%的受访者了解Mesos，但没有投入使用。
 
 ![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%209.png) 
+
 图9  中国市场对Mesos的了解程度（资料来源：2017年中国Mesos、DC/OS调研报告） 
 
 
