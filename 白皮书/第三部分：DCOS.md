@@ -84,14 +84,8 @@ Apache Mesos是由BenjaminHindman、Andy Konwinski、MateiZaharia、Ali Ghodsi�
 
 ## [（一） Mesos]()解析
 
-Mesos是Apache下的开源分布式资源管理框架，采用简化的master/slave（agent）结构设计。master中的所有元数据均可以通 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.gif) |
-
-过slave（agent）重构，因此，依托zookeeper，Mesos可以快速解决master单点故障。
-
+Mesos是Apache下的开源分布式资源管理框架，采用简化的master/slave（agent）结构设计。master中的所有元数据均可以通 过slave（agent）重构，因此，依托zookeeper，Mesos可以快速解决master单点故障。
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%201.png) 
 图1  Mesos架构图（http://mesos.apache.org/documentation/latest/architecture/）
 
 Mesos由4个部分组成：Mesos-master、Mesos-slave（agent）、Framework、Executor。
@@ -108,17 +102,8 @@ Executor主要用于启动框架内部的task。由于不同的框架，启动ta
 
 从系统架构上看，DC/OS架构分为kernel space和user space。其中，kernel space包括Mesos Master和Mesos Agent；使用区包括集成系统和进程，集成系统包括了Mesos-DNS、Distributed DNS Proxy，以及Spark、Marathon等服务。
 
-图2   
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image004.gif) |
-
-DC/OS
-
-架构图（https://dcos.io/docs/1.8/overview/architecture/）
-
- 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%202.png) 
+图2 DC/OS架构图（https://dcos.io/docs/1.8/overview/architecture/）
 
 Ø   Kernel space采取对集群的两级调用完成资源分配。两级调用是通过Mesos Master和Mesos Agent实现的。
 
@@ -146,37 +131,14 @@ User space由系统部件和DC/OS服务构成。
 
 从运行流程看，DC/OS可分为核心层（Core）、服务层（Service）、应用层（Application）。
 
- 
-
- 
-
- 
-
-图3   
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image006.gif) |
-
-DC/OS
-
-运行架构图（https://dcos.io/docs/1.8/overview/architecture/）
-
- 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%203.png) 
+图3 DC/OS运行架构图（https://dcos.io/docs/1.8/overview/architecture/）
 
 当DC/OS进程启动时，DC/OS的层与层和同一层之间会发生相互的交互：用户首先通过客户端命令行或Mesos-DNS，向进程调度器（Scheduler）发送进程启动请求。随后，Mesos Master会依据集群状态和算法，向Scheduler分配资源。Scheduler会根据客户端请求量，逐步释放从Master获取的资源，至全部客户端都不再请求进程时，Scheduler会将全部资源释放回Master。在Scheduler获得了Master分配的资源后，客户端即可启动进程；同时，Master会向Scheduler发送资源，当资源足够使用时，Scheduler向Master发送任务启动请求。Master收到请求后，调度Agent通过Executor启动进程。进程启动后，DC/OS中的Executor、Agent、Master、Scheduler逐级向客户端报告运行状态。具体运行流程可如下图所示：
 
  
-
-图4   
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image008.gif) |
-
-DC/OS
-
-运行流程图（https://dcos.io/docs/1.8/overview/architecture/）
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%204.png) 
+图4 DC/OS运行流程图（https://dcos.io/docs/1.8/overview/architecture/）
 
 ## [（三） DC/OS]()技术优势
 
@@ -184,37 +146,19 @@ DC/OS
 
 由于DC/OS基于Mesos核心，因此可用于搭建容器和大数据等应用，并将容器和应用以服务的形式运行，同时能够快速迁移至生产环境。DC/OS可以通过Marathon技术，合理编排Docker等容器。基于Mesos核心构建的DC/OS，一方面支持灵活的部署容器；另一方面，Mesos提供了原生的容器工具。原生Mesos容器基于Linux Cgroups和Namespaces，提供了容器所需的隔离方法，优势在于用户通过图形化界面或者命令行安装新服务时，Mesos无需创建镜像，即可自动完成容器的调度和隔离，有效缩短了分布式系统的部署时间。
 
-DC/OS同时拥有一套独特的双层调度体系，具体如下图4所示。
+DC/OS同时拥有一套独特的双层调度体系，具体如下图所示。
 
- 
-
-图5   
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image010.gif) |
-
-Mesos
-
-任务运行流程图（http://mesos.apache.org/documentation/latest/architecture/）
-
- 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%205.png) 
+图5 Mesos任务运行流程图（http://mesos.apache.org/documentation/latest/architecture/）
 
 在Mesos中，Framework和Mesos master中均具有Scheduler模块（Mesos master的Schedule位于allocation中），Mesos master中的Scheduler会将资源按照需求分配给每个Framework；Framework中的Scheduler会根据资源分配规则，将资源分配给每个任务和服务。Mesos支持以服务的形式运行容器，能够将Kubernetes、Swarm等系统以服务方式运行，体现出了对容器更好地支持。另外，对于Spark、Kafka等应用，DC/OS能够以服务形式，展现在图形界面中。同时，安装和运行在DC/OS上的应用和服务全部运行在同一集群内，为客户的管理提供了便利。
 
 DC/OS提供了package管理机制，将应用和服务及所需的配置打包成模板，上传至package repository，使用者在安装时，只需使用类似yum安装方法的一行命令即可完成安装。
 
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image012.gif) |
-
 以安装Spark应用为例，安装流程如下图所示：
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%206.png) 
 图6  DC/OS安装应用流程图（http://www.cnblogs.com/popsuper1982/p/5930827.html）
-
- 
 
 在安装过程中，命令首先通过客户端将请求提交给Admin Router，随后Admin Router将请求通过cosmos提交给Marathon。Marathon将请求提交给Mesos master和Mesos agent。Mesos agent启动一个容器运行spark，并注册到Mesos里面成为一个新的Framework。安装完成后，Spark被封装在一个Docker或者Mesos容器中，只有当应用运行时，才会通过Mesos agent分配给Docker资源支撑应用的运行。与传统的容器技术相比，Mesos中的应用在运行前不占用资源，传统容器技术中的应用在部署完成时，就已经分配给应用预留资源。
 
@@ -290,21 +234,16 @@ DC/OS的组件仓库提供了微服务以及公共组件的安装部署能力。
 
 ## [（二） DevOps]()
 
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image014.gif) |
-
 DC/OS通过集成 Jenkins，SVN和Gitlab等版本管理工具实现DevOps场景，开发人员通过提交代码到Gitlab中，代码会通过审批进入Jenkins中进行单元测试，功能测试，集成测试，回归测试等，最终发布应用到DC/OS平台，通过对Jenkins中的Docker插件／管道部署实现自动镜像产生并发布成DC/OS组件或者Marathon直接部署。同时支持蓝绿发布、灰度发布、紧急修复、版本回滚等发布和部署模式。
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%207.png) 
 图7  DC/OS在DevOps中的应用（资料来源：Mesosphere）
 
 ## [（三） 弹性扩容（Twitter]()、eBay）
 
-![https://lh6.googleusercontent.com/lC-CiB_N0TltNmFHZJ0RXuPuDWnOTSmSfeS30GORdrwmdlNvej-f2dIsb7ZIhXcv0_NMWKbdwEGD2m3RZ6aD9BVPHeiqF5RQxyS80ZjMG4p0zxADZd6Ef0LBehSmf9ivxHbcFs3J](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image016.gif)
 通过对DC/OS Marathon配置实现动态弹性。如下图：
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%208.png) 
 图8  通过DC/OS对Marathon进行态性调整（资料来源：Mesosphere）
 
 ## [（四） 对裸机应用的管理]()
@@ -343,72 +282,38 @@ DC/OS是一个开源项目，于2016年4月推出，采用Apache 2.0协议，拥
 
 2017年，DC/OS中国社区发布对中国云计算企业的调研访问报告《2017年中国Mesos、DC/OS调研报告》，报告显示虽然中国市场对Mesos有普遍的了解，但在生产环境中的使用率仍然很低，仅占10%。有7%的受访者表示从未听说过Mesos；有83%的受访者了解Mesos，但没有投入使用。
 
-图9   
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%209.png) 
+图9  中国市场对Mesos的了解程度（资料来源：2017年中国Mesos、DC/OS调研报告） 
 
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image018.gif) |
-
-中国市场对Mesos的了解程度（资料来源：2017年中国Mesos、DC/OS调研报告）
-
- 
-
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image020.gif) |
 
 从行业分布上看，在使用DC/OS的企业中，电信、影视、移动互联、服务业占比最高。
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2010.png) 
 图10 DC/OS用户行业分布（资料来源：2017年中国Mesos、DC/OS调研报告）
 
- 
-
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image022.gif) |
 
 在组件中，Marathon、Kafka、k8s是使用率最高的组件。
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2011.png) 
 图11  DC/OS组件使用率（资料来源：2017年中国Mesos、DC/OS调研报告）
-
- 
-
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image024.gif) |
 
 在已经使用Mesos、DC/OS的用户中，Mesos、DC/OS提供的稳定和成熟的技术是选用的最主要原因，此外，有效提高资源使用效率和减少开支、提供简单便捷的运维管理功能也是选用的主要原因。
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2012.png) 
 图12  用户选用Meoso、DC/OS的主要原因（资料来源：2017年中国Mesos、DC/OS调研报告）
 
- 
-
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image026.gif) |
 
 使用DC/OS可以为企业收入带来持续增长，其中，移动互联领域增长速度最快，预计到2017年第二季度，总收入将超过12亿元人民币。此外，电信、金融等行业也将得到稳步增长。
 
+
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2013.png) 
 图13  DC/OS用户收入增长（资料来源：2017年中国Mesos、DC/OS调研报告）
 
 ## [（二） DC/OS]()中国产业发展面临的挑战
 
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image028.gif) |
-
 根据《2017年中国Mesos、DC/OS调研报告》发布的结果，用户当前对于使用DC/OS困惑主要在于人才的稀缺、安全机制以及缺少相关工具。
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2014.png) 
 图14 用户使用DC/OS的主要困惑（资料来源：2017年中国Mesos、DC/OS调研报告）
 
 ### [在技术层面]()
@@ -421,14 +326,9 @@ DC/OS是一个开源项目，于2016年4月推出，采用Apache 2.0协议，拥
 
 ### [在市场推广层面]()
 
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image030.gif) |
-
 根据《2017年中国Mesos、DC/OS调研报告》，中国市场对DC/OS的了解程度较低，有超过半数的受访者表示从未听说过DC/OS技术；仅有1%的受访者表示已经将DC/OS投入到生产环境中。
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2015.png)    
 图15  中国市场对DC/OS的了解程度（资料来源：2017年中国Mesos、DC/OS调研报告）
 
  
@@ -491,8 +391,7 @@ DC/OS将在短期内支持Windows操作系统，并支持通过Windows容器调�
 
 针对DC/OS的特点和联通的业务特性，联通提出了基于DC/OS的多租户容器化调度管理平台方案。如图所示。
 
-![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image032.gif)
-
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2016.png) 
 图16 中国联通DC/OS容器化平台方案架构
 
 具体的改造点如下：
@@ -517,8 +416,7 @@ DC/OS将在短期内支持Windows操作系统，并支持通过Windows容器调�
 
 通过如上改造，OpenDC/OS的能力有了极大的提高，已经可以适应软研院对容器化平台的需求，通过该平台可以打造新一代的软件生态环境。利用平台的资源分配能力、应用管理能力、通用组件能力，构建软件全生命周期支撑平台。
 
-![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image034.gif)
-
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2017.png) 
 图17  中国联通DC/OS容器化平台方案应用示意
 
 使用该平台可以做到：
@@ -539,14 +437,9 @@ DC/OS将在短期内支持Windows操作系统，并支持通过Windows容器调�
 
 ## 烽火通信楚天云平台案例
 
- 
-
-|      |                                          |
-| ---- | ---------------------------------------- |
-|      | ![img](file:////Users/chenwentao/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image036.gif) |
-
 楚天云在2016年6月正是上线之后，客户又提出了新的PAAS需求，烽火通信为此专门建立了单独的网络区域来部署DC/OS平台，其部署架构见下图：
 
+![img](https://github.com/opensourcecloud/manual/blob/master/白皮书/img/DCOS/图片%2018.png) 
 图18  烽火楚天云PAAS平台DC/OS部署架构
 
 通过部署烽火楚天云DCOS平台，可以对应用提供如下服务：
